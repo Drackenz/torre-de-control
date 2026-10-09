@@ -41,6 +41,8 @@ CÓMO FUNCIONA UN TURNO:
 
 NÚMEROS DEL CONFIG: 2 pistas, pista ocupada 3 turnos, llega 1 avioneta cada 2 turnos, combustible inicial 6, 8 avionetas en total, máximo 1 desvío permitido, combustible bajo = 2 o menos.
 
+![alt text](Prompt1.png)
+
 P2:Creá src/main.ts y src/estilo.css para mostrar Torre de Control
 en pantalla.
 
@@ -58,6 +60,8 @@ REGLAS
 Ajustá index.html para que tenga un div con id="app" y cargue src/main.ts
 como módulo. Al terminar confirmame que no hay errores en la consola.
 
+![alt text](Prompt2.png)
+
 P3: Creá src/main.ts y src/estilo.css para mostrar Torre de Control
 en pantalla.
 
@@ -74,3 +78,16 @@ REGLAS
 
 Ajustá index.html para que tenga un div con id="app" y cargue src/main.ts
 como módulo. Al terminar confirmame que no hay errores en la consola.
+
+![alt text](Prompt3.png)
+
+P4: Hacé que esto funcione bien en un celular:
+
+1. Todo lo que se toca tiene que medir al menos 44 píxeles de alto y de ancho.
+2. Nada se sale de la pantalla a lo ancho: cero desplazamiento horizontal.
+3. El texto nunca baja de 16 píxeles.
+4. Funciona con el dedo (toque) y también con teclado, las dos cosas.
+5. Agregá la etiqueta viewport en index.html si falta.
+
+No cambies las reglas ni la dificultad. Decime qué ajustaste.
+![alt text](Prompt4.png)

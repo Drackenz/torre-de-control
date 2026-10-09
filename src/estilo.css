@@ -26,8 +26,12 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: clip;
+}
+
 body {
-  min-width: 320px;
+  width: 100%;
   min-height: 100vh;
   margin: 0;
   background: var(--fondo);
@@ -35,6 +39,7 @@ body {
 }
 
 button {
+  min-width: 44px;
   min-height: 48px;
   padding: 0.65rem 1rem;
   border: 2px solid transparent;
@@ -42,6 +47,7 @@ button {
   font: inherit;
   font-weight: 700;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 button:focus-visible {
@@ -223,7 +229,7 @@ h3 {
 
 .lista-avionetas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 0.75rem;
   margin: 0;
   padding: 0;
@@ -345,6 +351,11 @@ h3 {
 
   .encabezado {
     align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .encabezado > div {
+    min-width: 0;
   }
 
   .encabezado h1 {
