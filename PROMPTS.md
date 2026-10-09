@@ -57,3 +57,20 @@ REGLAS
 
 Ajustá index.html para que tenga un div con id="app" y cargue src/main.ts
 como módulo. Al terminar confirmame que no hay errores en la consola.
+
+P3: Creá src/main.ts y src/estilo.css para mostrar Torre de Control
+en pantalla.
+
+REGLAS
+- main.ts NO decide nada: llama a las funciones de logica.ts y dibuja el
+  resultado. Si tenés que escribir una regla acá, está en el lugar equivocado:
+  decímelo en lugar de hacerlo.
+- Tres estados visibles: el inicio, el uso normal y el final.
+- Contraste alto y texto nunca menor a 16 píxeles.
+- Los colores según mi ficha: verde = pista libre o combustible bien,
+  amarillo = combustible 2 o menos, rojo = peligro o pista ocupada,
+  azul oscuro = fondo. Sin imágenes ni librerías externas.
+- Importá el CSS desde main.ts con: import './estilo.css'
+
+Ajustá index.html para que tenga un div con id="app" y cargue src/main.ts
+como módulo. Al terminar confirmame que no hay errores en la consola.
