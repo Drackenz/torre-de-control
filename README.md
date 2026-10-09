@@ -14,6 +14,8 @@ Atendé las 8 avionetas con como máximo un desvío.
 
 ## 3. Enlace para abrirlo
 
+[Abrir Torre de Control en GitHub Pages](https://drackenz.github.io/torre-de-control/).
+
 [Abrir Torre de Control en este equipo](http://localhost:5173/) después de iniciar el servidor local.
 
 [Abrir el repositorio del proyecto](https://github.com/Drackenz/torre-de-control).
