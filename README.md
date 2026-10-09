@@ -33,34 +33,11 @@ Abrí en el navegador la dirección que indique Vite, normalmente `http://localh
 
 ## 5. Qué dirigí yo y qué error encontré probando
 
-<!-- Completá acá qué dirigiste vos y qué error encontraste al probar. -->
+Pude encontrar errores de relacion entre la ficha y los prompts que tambien identifico compilot en los que yo dirigi la correcion para que favoreciera el juego en su etapa final.
 
 ## 6. Declaración de autoría
 
-<!-- Completá acá qué herramienta usaste, que el código lo generó un agente de IA bajo tu dirección y qué partes podés explicar. -->
+Use claude ai para la guia, compilot para indicarle ocmo armar el proyecto acorde a como yo lo desee y bajo las explicaciones de compilot puedo explicar la ñlogica y reglas de juego
 
-## Evidencias
 
-### Fase 1: Inicio
 
-![Evidencia de la fase de inicio](evidencias/01-inicio.png)
-
-### Fase 2: Lógica
-
-![Evidencia de la fase de lógica](evidencias/02-logica.png)
-
-### Fase 3: Pruebas
-
-![Evidencia de la fase de pruebas](evidencias/03-pruebas.png)
-
-### Fase 4: Pantalla
-
-![Evidencia de la fase de pantalla](evidencias/04-pantalla.png)
-
-### Fase 5: Móvil
-
-![Evidencia de la fase móvil](evidencias/05-movil.png)
-
-### Fase 6: Publicado
-
-![Evidencia de la fase de publicación](evidencias/06-publicado.png)
