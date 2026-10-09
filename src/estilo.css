@@ -1,0 +1,381 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background: #071b35;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  line-height: 1.5;
+
+  --fondo: #071b35;
+  --panel: #102b4d;
+  --panel-secundario: #17385d;
+  --texto: #ffffff;
+  --verde: #176b3a;
+  --verde-claro: #9af0b3;
+  --amarillo: #ffe36e;
+  --amarillo-texto: #302600;
+  --rojo: #a51f2b;
+  --rojo-claro: #ffc1c1;
+  --borde: #8faaca;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+button {
+  min-height: 48px;
+  padding: 0.65rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 0.65rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 3px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.pantalla {
+  width: min(100% - 2rem, 940px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.pantalla-inicio,
+.pantalla-final {
+  display: grid;
+  place-items: center;
+}
+
+.panel {
+  padding: 1.5rem;
+  border: 1px solid var(--borde);
+  border-radius: 1rem;
+  background: var(--panel);
+}
+
+.bienvenida,
+.cierre {
+  width: min(100%, 650px);
+  padding: clamp(1.5rem, 6vw, 3.5rem);
+  text-align: center;
+}
+
+.sobretitulo {
+  margin: 0 0 0.5rem;
+  color: var(--verde-claro);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 7vw, 3.25rem);
+  line-height: 1.1;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin-bottom: 0.35rem;
+  font-size: 1.25rem;
+}
+
+.introduccion {
+  max-width: 34rem;
+  margin: 0 auto 1.25rem;
+  font-size: 1.2rem;
+}
+
+.instrucciones {
+  margin-bottom: 1.75rem;
+}
+
+.boton-principal {
+  min-height: 56px;
+  padding: 0.75rem 1.5rem;
+  background: var(--verde-claro);
+  color: #092817;
+}
+
+.boton-principal:hover {
+  background: #c0ffd0;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.encabezado h1 {
+  margin-bottom: 0;
+}
+
+.turno {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--borde);
+  border-radius: 0.65rem;
+  background: var(--panel);
+}
+
+.turno strong {
+  display: inline-block;
+  margin-left: 0.3rem;
+  font-size: 1.35rem;
+}
+
+.panel-pistas,
+.panel-espera,
+.panel-controles {
+  margin-bottom: 1rem;
+}
+
+.pistas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.pista {
+  display: flex;
+  min-height: 185px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 2px solid currentColor;
+  border-radius: 0.75rem;
+}
+
+.pista-libre {
+  background: var(--verde);
+  color: #ffffff;
+}
+
+.pista-ocupada {
+  background: var(--rojo);
+  color: #ffffff;
+}
+
+.pista p {
+  flex: 1;
+  margin-bottom: 0.75rem;
+}
+
+.boton-pista {
+  width: 100%;
+  border-color: #ffffff;
+  background: #ffffff;
+  color: #092817;
+}
+
+.boton-pista:disabled {
+  background: #d8dce2;
+  color: #252a31;
+}
+
+.titulo-espera {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.titulo-espera p {
+  margin: 0;
+}
+
+.lista-avionetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.avioneta {
+  display: flex;
+  width: 100%;
+  min-height: 64px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-color: var(--borde);
+  background: var(--panel-secundario);
+  color: #ffffff;
+  text-align: left;
+}
+
+.avioneta-seleccionada {
+  border-color: var(--amarillo);
+  box-shadow: inset 0 0 0 1px var(--amarillo);
+}
+
+.avioneta-nombre {
+  font-weight: 700;
+}
+
+.combustible {
+  padding: 0.2rem 0.45rem;
+  border-radius: 0.35rem;
+  font-weight: 700;
+}
+
+.combustible-bien {
+  background: var(--verde-claro);
+  color: #092817;
+}
+
+.combustible-bajo {
+  background: var(--amarillo);
+  color: var(--amarillo-texto);
+}
+
+.sin-espera {
+  margin: 0;
+}
+
+.contadores,
+.resumen-final {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.contadores {
+  margin-bottom: 1rem;
+}
+
+.contadores p,
+.resumen-final p {
+  margin: 0;
+}
+
+.contadores strong,
+.resumen-final strong {
+  margin-left: 0.3rem;
+  font-size: 1.25rem;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.boton-accion {
+  min-width: 180px;
+  background: #ffffff;
+  color: #09203d;
+}
+
+.boton-desviar {
+  border-color: var(--rojo-claro);
+  background: var(--rojo);
+  color: #ffffff;
+}
+
+.ayuda-controles {
+  margin: 1rem 0 0;
+}
+
+.mensaje {
+  min-height: 1.5em;
+  margin: 0.5rem 0 0;
+  color: var(--amarillo);
+  font-weight: 700;
+}
+
+.cierre .introduccion {
+  margin-bottom: 1.5rem;
+}
+
+.resumen-final {
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 560px) {
+  .pantalla {
+    width: min(100% - 1rem, 940px);
+    padding: 1rem 0;
+  }
+
+  .panel {
+    padding: 1rem;
+  }
+
+  .encabezado {
+    align-items: flex-start;
+  }
+
+  .encabezado h1 {
+    font-size: 2rem;
+  }
+
+  .turno {
+    padding: 0.5rem 0.65rem;
+  }
+
+  .pistas {
+    gap: 0.5rem;
+  }
+
+  .pista {
+    min-height: 185px;
+    padding: 0.65rem;
+  }
+
+  .boton-pista {
+    padding: 0.5rem;
+  }
+
+  .titulo-espera {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .acciones,
+  .boton-accion {
+    width: 100%;
+  }
+}
